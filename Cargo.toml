@@ -2,6 +2,11 @@
 name = "rusty_cc"
 version = "0.1.0"
 edition = "2021"
+authors = ["ankushlohiya"]
+license = "mit"
+description = "library for handling i/o for competetive coding sites, some utility functions are also there"
+repository = "https://github.com/ankushlohiya001/rusty_cc"
+homepage = "https://github.com/ankushlohiya001/rusty_cc"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
