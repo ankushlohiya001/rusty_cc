@@ -4,6 +4,7 @@ pub use reading::Reading;
 mod utils;
 use std::fmt::Arguments;
 use std::io::{stdin, stdout, BufWriter, Stdout, Write};
+pub use utils::*;
 
 pub mod prelude {
     pub use super::{Reading, RW};
