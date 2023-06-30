@@ -21,3 +21,27 @@ pub fn hcf(a: i64, b: i64) -> i64 {
 pub fn lcm(a: i64, b: i64) -> i64 {
     a * b / hcf(a, b)
 }
+
+pub fn digits(mut num: i64, base: i64) -> Vec<i64> {
+    let mut digis = Vec::new();
+    while num > 0 {
+        let digit = num % base;
+        num /= base;
+        digis.push(digit);
+    }
+    digis.reverse();
+    digis
+}
+
+pub fn exp_mod(num: i64, exp: i64, m: i64) -> i64 {
+    let digis = digits(exp, 2);
+    let mut rem = 1;
+    for &dig in digis.iter() {
+        rem *= rem;
+        if dig == 1 {
+            rem *= num;
+        }
+        rem %= m;
+    }
+    rem
+}
