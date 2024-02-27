@@ -13,9 +13,8 @@ pub trait Reading {
     where
         T: FromStr + Default,
     {
-        let txt = self.read_line();
-        let wrds = txt.split_whitespace();
-        wrds
+        self.read_line()
+            .split_whitespace()
             .map(|wrd| wrd.parse().unwrap_or(T::default()))
             .collect()
     }
